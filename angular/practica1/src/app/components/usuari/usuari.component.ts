@@ -24,11 +24,9 @@ export class UsuariComponent {
   }
 
   idiomes: string[] = ['Català', 'Español', 'Anglés', 'Francés', 'Italià'];
-
-  emplenaLanguages() { 
-    return this.idiomes.map((idioma) => {
-      return `<option value="${idioma}">${idioma}</option>`;
-    }).join('');
+    
+  constructor() {
+    this.idiomes.sort((a, b) => a.localeCompare(b));
   }
 
  
