@@ -8,21 +8,18 @@
   <input type="email" [(ngModel)]="correu">
 <br>
 <label>Contrasenya
-  <input type="password" [(ngModel)]="password">
+  <input type="password" [(ngModel)]="contrassenya">
 </label>
 <br>
 <label>Repetir Contrasenya
-  <input type="password" [(ngModel)]="repeatPassword">
+  <input type="password" [(ngModel)]="repetirContrassenya">
 </label>
 <br>
 <label>Idioma
-  <select [(ngModel)]="selectedLanguage">
+  <select [(ngModel)]="idiomaSeleccionat" >
     <option value="" disabled selected>Selecciona un idioma</option>
-    <option value="catala">Català</option>
-    <option value="angles">Anglès</option>
-    <option value="castella">Castellà</option>
-    <option value="frances">Francès</option>
-    <option value="italia">Italià</option>
+    <option *ngFor="let idioma of idiomes" [value]="idioma">{{ idioma }}</option>
+    
   </select>
 </label>
 <br>
