@@ -1,0 +1,29 @@
+<h1>Sign up</h1>
+<br>
+<label>Usuari
+  <input type="text" [(ngModel)]="nom" required>
+</label>
+<br>
+<label>Correu
+  <input type="email" [(ngModel)]="correu" required>
+<br>
+<label>Contrasenya
+  <input type="password" [(ngModel)]="password" required>
+</label>
+<br>
+<label>Repeat Contrasenya
+  <input type="password" [(ngModel)]="repeatPassword" required>
+</label>
+<br>
+<label>Idioma
+  <select [(ngModel)]="selectedLanguage" required>
+    <option value="catala">Català</option>
+    <option value="angles">Anglès</option>
+    <option value="castella">Castellà</option>
+    <option value="frances">Francès</option>
+    <option value="italia">Italià</option>
+  </select>
+</label>
+<br>
+<button (click)="submit()">Sign up</button>
+<br>
