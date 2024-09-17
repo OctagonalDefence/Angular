@@ -14,6 +14,12 @@ export class UsuariComponent {
   repetirContrassenya!: string;
   idiomaSeleccionat!: string;
 
+  idiomes: string[] = ['Català', 'Español', 'Anglés', 'Francés', 'Italià'];
+    
+  constructor() {
+    this.idiomes.sort((a, b) => a.localeCompare(b));
+  }
+
   isFormValid(): boolean {
     return !!(this.nom && this.correu && this.contrassenya && this.repetirContrassenya && this.idiomaSeleccionat);
   }
@@ -23,11 +29,7 @@ export class UsuariComponent {
     return emailRegex.test(email);
   }
 
-  idiomes: string[] = ['Català', 'Español', 'Anglés', 'Francés', 'Italià'];
-    
-  constructor() {
-    this.idiomes.sort((a, b) => a.localeCompare(b));
-  }
+  
 
  
 
