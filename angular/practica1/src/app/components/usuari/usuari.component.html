@@ -1,22 +1,23 @@
 <h1>Sign up</h1>
 <br>
 <label>Usuari
-  <input type="text" [(ngModel)]="nom" required>
+  <input type="text" [(ngModel)]="nom">
 </label>
 <br>
 <label>Correu
-  <input type="email" [(ngModel)]="correu" required>
+  <input type="email" [(ngModel)]="correu">
 <br>
 <label>Contrasenya
-  <input type="password" [(ngModel)]="password" required>
+  <input type="password" [(ngModel)]="password">
 </label>
 <br>
-<label>Repeat Contrasenya
-  <input type="password" [(ngModel)]="repeatPassword" required>
+<label>Repetir Contrasenya
+  <input type="password" [(ngModel)]="repeatPassword">
 </label>
 <br>
 <label>Idioma
-  <select [(ngModel)]="selectedLanguage" required>
+  <select [(ngModel)]="selectedLanguage">
+    <option value="" disabled selected>Selecciona un idioma</option>
     <option value="catala">Català</option>
     <option value="angles">Anglès</option>
     <option value="castella">Castellà</option>
@@ -25,5 +26,6 @@
   </select>
 </label>
 <br>
-<button (click)="submit()">Sign up</button>
+<button (click)="submit()">Registra't</button>
 <br>
+ 
