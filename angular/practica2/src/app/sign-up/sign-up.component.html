@@ -19,10 +19,7 @@
 <br>
 <label>Language:
 <select type="languages">
-    <option value="es">English</option>
-    <option value="en">French</option>
-    <option value="fr">Italian</option>
-    <option value="de">Spanish</option>
+    <option *ngFor="let language of getLanguages()" [value]="language">{{language}}</option>
 </select>
 </label>
 <br>

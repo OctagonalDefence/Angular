@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SignUpComponent {
 
-  user!: string;
-  
+  getLanguages(): string[] {
+    return ['French', 'Spanish', 'Italian', 'German', 'English'].sort();
+  } 
 
 }
