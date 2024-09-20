@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SignUpComponent } from './sign-up.component';
+import { FormsModule } from '@angular/forms';
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;
@@ -8,7 +8,8 @@ describe('SignUpComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignUpComponent ]
+      declarations: [ SignUpComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
 
@@ -31,8 +32,14 @@ describe('SignUpComponent', () => {
     expect(compiled.querySelector('h1')).toBeTruthy();
   });
 
-  it('has a user imput', () => {
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('input[name="user"]')).toBeTruthy();
+  it('should have an email input', () => {
+    const emailInput = fixture.nativeElement.querySelector('input[type="email"]');
+    expect(emailInput).toBeTruthy();
+  });
+
+  it('should have a user input', () => {
+    const userInput = fixture.nativeElement.querySelector('input[type="text"]');
+    expect(userInput).toBeTruthy();
   });
 });
+
