@@ -56,5 +56,9 @@ expect(repeatPasswordInput).toBeTruthy();
     const languageSelect = fixture.nativeElement.querySelector('select[type="languages"]');
     expect(languageSelect).toBeTruthy();
   });
+  it ('should have 4 language options in select', () => {
+    const languageOptions = fixture.nativeElement.querySelectorAll('select option');
+    expect(languageOptions.length).toBe(4);
+  });
 });
 
