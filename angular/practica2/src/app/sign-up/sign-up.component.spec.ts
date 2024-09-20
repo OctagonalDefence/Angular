@@ -25,4 +25,9 @@ describe('SignUpComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Sign Up');
   });
+
+  it('has a h1', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')).toBeTruthy();
+  });
 });
