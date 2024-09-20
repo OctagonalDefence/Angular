@@ -42,6 +42,11 @@ describe('SignUpComponent', () => {
     expect(emailInput).toBeTruthy();
   });
 
+  it('should have a password input', () => {
+    const passwordInput = fixture.nativeElement.querySelector('input[type="password"]');
+    expect(passwordInput).toBeTruthy();
+  });
+
 
 });
 
