@@ -32,14 +32,16 @@ describe('SignUpComponent', () => {
     expect(compiled.querySelector('h1')).toBeTruthy();
   });
 
+  it('should have a user input', () => {
+    const userInput = fixture.nativeElement.querySelector('input[type="text"]');
+    expect(userInput).toBeTruthy();
+  });
+
   it('should have an email input', () => {
     const emailInput = fixture.nativeElement.querySelector('input[type="email"]');
     expect(emailInput).toBeTruthy();
   });
 
-  it('should have a user input', () => {
-    const userInput = fixture.nativeElement.querySelector('input[type="text"]');
-    expect(userInput).toBeTruthy();
-  });
+
 });
 
