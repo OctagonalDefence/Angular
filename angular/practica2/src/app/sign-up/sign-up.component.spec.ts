@@ -65,8 +65,8 @@ expect(repeatPasswordInput).toBeTruthy();
     expect(languageOptions[0].textContent).toBe('English');
     expect(languageOptions[1].textContent).toBe('French');
     expect(languageOptions[2].textContent).toBe('German');
-    expect(languageOptions[2].textContent).toBe('Italian');
-    expect(languageOptions[3].textContent).toBe('Spanish');
+    expect(languageOptions[3].textContent).toBe('Italian');
+    expect(languageOptions[4].textContent).toBe('Spanish');
 
   });
 
