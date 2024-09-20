@@ -56,16 +56,18 @@ expect(repeatPasswordInput).toBeTruthy();
     const languageSelect = fixture.nativeElement.querySelector('select[type="languages"]');
     expect(languageSelect).toBeTruthy();
   });
-  it ('should have 4 language options in select', () => {
+  it ('should have 5 language options in select', () => {
     const languageOptions = fixture.nativeElement.querySelectorAll('select option');
-    expect(languageOptions.length).toBe(4);
+    expect(languageOptions.length).toBe(5);
   });
   it ('should have Spanish, English, French and Italian as language options and they should be ordered alfabetically', () => {
     const languageOptions = fixture.nativeElement.querySelectorAll('select option');
     expect(languageOptions[0].textContent).toBe('English');
     expect(languageOptions[1].textContent).toBe('French');
+    expect(languageOptions[2].textContent).toBe('German');
     expect(languageOptions[2].textContent).toBe('Italian');
     expect(languageOptions[3].textContent).toBe('Spanish');
+
   });
 
   it('should have a submit button', () => {
