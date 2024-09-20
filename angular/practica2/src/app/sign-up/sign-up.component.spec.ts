@@ -67,5 +67,10 @@ expect(repeatPasswordInput).toBeTruthy();
     expect(languageOptions[2].textContent).toBe('Italian');
     expect(languageOptions[3].textContent).toBe('Spanish');
   });
+
+  it('should have a submit button', () => {
+    const submitButton = fixture.nativeElement.querySelector('button[type="submit"]');
+    expect(submitButton).toBeTruthy();
+  });
 });
 
