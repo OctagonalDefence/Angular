@@ -30,4 +30,9 @@ describe('SignUpComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')).toBeTruthy();
   });
+
+  it('has a user imput', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('input[name="user"]')).toBeTruthy();
+  });
 });
