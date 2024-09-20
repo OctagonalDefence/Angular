@@ -60,12 +60,12 @@ expect(repeatPasswordInput).toBeTruthy();
     const languageOptions = fixture.nativeElement.querySelectorAll('select option');
     expect(languageOptions.length).toBe(4);
   });
-  it ('should have Spanish, English, French and Italian as language options', () => {
+  it ('should have Spanish, English, French and Italian as language options and they should be ordered alfabetically', () => {
     const languageOptions = fixture.nativeElement.querySelectorAll('select option');
-    expect(languageOptions[0].textContent).toBe('Spanish');
-    expect(languageOptions[1].textContent).toBe('English');
-    expect(languageOptions[2].textContent).toBe('French');
-    expect(languageOptions[3].textContent).toBe('Italian');
+    expect(languageOptions[0].textContent).toBe('English');
+    expect(languageOptions[1].textContent).toBe('French');
+    expect(languageOptions[2].textContent).toBe('Italian');
+    expect(languageOptions[3].textContent).toBe('Spanish');
   });
 });
 
