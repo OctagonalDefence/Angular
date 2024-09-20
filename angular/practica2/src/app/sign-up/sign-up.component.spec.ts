@@ -51,5 +51,10 @@ describe('SignUpComponent', () => {
 const repeatPasswordInput = fixture.nativeElement.querySelector('input[type="repeatpassword"]');
 expect(repeatPasswordInput).toBeTruthy();
   });
+
+  it('should have a language select', () => {
+    const languageSelect = fixture.nativeElement.querySelector('select[type="languages"]');
+    expect(languageSelect).toBeTruthy();
+  });
 });
 
