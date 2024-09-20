@@ -47,6 +47,9 @@ describe('SignUpComponent', () => {
     expect(passwordInput).toBeTruthy();
   });
 
-
+  it('should have a repeatPassword input', () => {
+const repeatPasswordInput = fixture.nativeElement.querySelector('input[type="repeatpassword"]');
+expect(repeatPasswordInput).toBeTruthy();
+  });
 });
 
