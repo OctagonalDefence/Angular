@@ -78,5 +78,18 @@ expect(repeatPasswordInput).toBeTruthy();
     const submitButton = fixture.nativeElement.querySelector('button[type="submit"]');
     expect(submitButton.disabled).toBeTruthy();    
   });
+  it('button should be enabled when all inputs are filled', () => {
+    const submitButton = fixture.nativeElement.querySelector('button[type="submit"]');
+    const userInput = fixture.nativeElement.querySelector('input[type="text"]');
+    const emailInput = fixture.nativeElement.querySelector('input[type="email"]');
+    const passwordInput = fixture.nativeElement.querySelector('input[type="password"]');
+    const repeatPasswordInput = fixture.nativeElement.querySelector('input[type="repeatpassword"]');
+    userInput.value = 'user';
+    emailInput.value = 'email';
+    passwordInput.value = 'password';
+    repeatPasswordInput.value = 'password';
+    fixture.detectChanges();
+    expect(submitButton.disabled).toBeFalsy();
 });
 
+});

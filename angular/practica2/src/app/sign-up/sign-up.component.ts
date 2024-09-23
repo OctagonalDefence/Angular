@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
+signUpForm: any;
 
   getLanguages(): string[] {
     return ['French', 'Spanish', 'Italian', 'German', 'English'].sort();
   } 
+
+  
+
 
 }
