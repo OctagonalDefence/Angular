@@ -74,5 +74,9 @@ expect(repeatPasswordInput).toBeTruthy();
     const submitButton = fixture.nativeElement.querySelector('button[type="submit"]');
     expect(submitButton).toBeTruthy();
   });
+  it('button should be initially disabled', () => {
+    const submitButton = fixture.nativeElement.querySelector('button[type="submit"]');
+    expect(submitButton.disabled).toBeTruthy();    
+  });
 });
 
