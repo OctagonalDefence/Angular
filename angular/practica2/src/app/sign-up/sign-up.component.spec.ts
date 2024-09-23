@@ -85,7 +85,7 @@ expect(repeatPasswordInput).toBeTruthy();
     const passwordInput = fixture.nativeElement.querySelector('input[type="password"]');
     const repeatPasswordInput = fixture.nativeElement.querySelector('input[type="repeatpassword"]');
     userInput.value = 'user';
-    emailInput.value = 'email';
+    emailInput.value = 'email@gmail.com';
     passwordInput.value = 'password';
     repeatPasswordInput.value = 'password';
     fixture.detectChanges();
