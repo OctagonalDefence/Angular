@@ -2,25 +2,25 @@
 <br>
 
 <label>User:
-<input type="text" id="user">
+<input type="text" ngModel="user" id="user">
 </label>
 <br>
 <label>Email:
-<input type="email" id="email">
+<input type="email" ngModel="email" id="email">
 </label>
 <br>
 <label>Password:
-<input type="password" id="password">
+<input type="password" ngModel="password" id="password">
 </label>
 <br>
 <label>Repeat Password:
-<input type="repeatPassword" id="repeatPassword">
+<input type="repeatPassword" ngModel="repeatPassword" id="repeatPassword">
 </label>
 <br>
 <label>Language:
 <select type="languages">
-    <option *ngFor="let language of getLanguages()" [value]="language">{{language}}</option>
+    <option  *ngFor="let language of getLanguages()" [value]="language" >{{language}}</option>
 </select>
 </label>
 <br>
-<button type="submit" disabled>Sign Up</button>
+<button type="submit" [disabled]="this.disabled()">Sign Up</button>
