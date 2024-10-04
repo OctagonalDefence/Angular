@@ -1,0 +1,76 @@
+<h1>Inscripcio de proves d'atletisme</h1>
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <h3>Dades identificatives</h3>
+    
+    <div class="form-group">
+      <label for="dni">DNI</label>
+      <input type="number" id="dni" formControlName="dni" required> <span *ngIf="dniLetter">{{ dniLetter }}</span>
+      <div *ngIf="registrationForm.get('dni')?.invalid && registrationForm.get('dni')?.touched">
+        Format de DNI invalid
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="codi">Codi de federat</label>
+      <input type="number" id="codi" formControlName="federatedCode" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="nom">Nom i cognoms</label>
+      <input type="text" id="nom" formControlName="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="telefon">Telefon</label>
+      <input type="number" id="telefon" formControlName="phone" required>
+      <div *ngIf="registrationForm.get('phone')?.invalid && registrationForm.get('phone')?.touched">
+        Format de telefon invalid
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" required>
+      <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">
+        Format de mail invalid
+      </div>
+    </div>
+  </fieldset>
+  <br>
+  <fieldset>
+    <h3>Inscripcio</h3>
+    <p>Un atleta no es pot inscriure a mes de 1100 metres:</p>
+
+    <div formGroupName="distances">
+      <div>
+        <input type="checkbox" id="100m" formControlName="100m">
+        <label for="100m">100 m llisos</label>
+      </div>
+      <div>
+        <input type="checkbox" id="200m" formControlName="200m">
+        <label for="200m">200 m llisos</label>
+      </div>
+      <div>
+        <input type="checkbox" id="400m" formControlName="400m">
+        <label for="400m">400 m llisos</label>
+      </div>
+      <div>
+        <input type="checkbox" id="800m" formControlName="800m">
+        <label for="800m">800 m llisos</label>
+      </div>
+      <div>
+        <input type="checkbox" id="1000m" formControlName="1000m">
+        <label for="1000m">1000 m llisos</label>
+      </div>
+      
+      <div *ngIf="registrationForm.get('distances')?.hasError('invalidDistance')">
+        No es pot inscriure a mes de 1100 metres
+      </div>
+    </div>
+  </fieldset>
+  <br>
+
+  <button type="submit" [disabled]="registrationForm.invalid">Inscripció</button>
+</form>
